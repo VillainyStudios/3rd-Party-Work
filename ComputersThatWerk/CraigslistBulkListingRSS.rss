@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<rdf:RDF xmlns="http://purl.org/rss/1.0/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cl="http://www.craigslist.org/about/cl-bulk-ns/1.0">
+
+  <channel>
+    <items>
+      <rdf:li rdf:resource="CTW-SEO"/>
+      <!-- List of additional items CTW can post for.
+            May need to create multiple listings for each
+            service to cover the tri-county area.  
+      <rdf:li rdf:resource="CTW-WebsiteDesign"/>
+      <rdf:li rdf:resource="CTW-MobileAppDevelopment"/>
+      <rdf:li rdf:resource="CTW-ITManaged"/>
+      <rdf:li rdf:resource="CTW-VirusRemoval"/>
+      <rdf:li rdf:resource="CTW-PCRepair"/>
+      -->
+    </items>
+
+    <cl:auth username="listuser@bogus.com"
+             password="p0stp@rty"
+             accountID="14"/>
+  </channel>
+
+  <item rdf:about="CTW-SEO">
+    <!-- Valid Categories for CTW Use: 
+              Business (bus), Internet Engineering (eng), Marketing (mar),
+              Software (sof), Systems/Networking (sad), Technical Support (tch),
+              Web/HTML/Information Design (web)
+    -->
+    <cl:category>fee</cl:category>
+
+    <!-- Valid Area and Sub-Area for CTW Use:
+              Area: Always Fort Myers (fmy)
+              Sub-Area: Lee County (lee)
+                        Charlotte County (chl)
+                        Collier County (col)
+    -->
+    <cl:area>fmy</cl:area>
+    <cl:subarea>lee</cl:subarea>
+    
+    <!-- No Reply Email will be given for Anti-Spam purposes.
+         The business phone number is listed as a contact point.
+     -->
+    <cl:replyEmail privacy="A" otherContactInfo="239-628-0733"></cl:replyEmail>
+
+    <!-- Title of the listing -->
+    <title>Are People Getting to Your Website? Search Engine Optimization at Great Rates</title>
+    <description><![CDATA[
+      At Computers That Werk, we work with you to find your target audience, geographical area, and budget in order to make your website work as hard as you do. Computers That Werk has competetive search engine optimization rates with specials when you sign up for quarterly, bi-annually, or annual services. Contact us today to get your site on the right track.
+    ]]></description>
+  </item>
+
+</rdf:RDF>
