@@ -8,10 +8,13 @@
 str=''
 
 # Output directory/file
-outfile=''
+outdir='/path/to/user/workspace/'
+outfile='output.file'
 
 echo $str | \
   gawk -v FPAT='<[^>]+>+' -v OFS= '{$1=$1}1' | \
   tr '>' '\n' | \
-  sed 's/<//' \
-  > $outfile
+  sed 's/<//' | \
+  sed '/^$/d' | \
+  sed '$!s/$/,/' \
+  > $outdir$outfile
