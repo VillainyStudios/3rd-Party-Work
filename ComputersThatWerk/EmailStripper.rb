@@ -4,6 +4,9 @@
 #    Created on: 04.12.2016
 ################################################
 
+#  Required CSV for exporting
+require 'csv'
+
 #  Allows user to enter file location
 puts 'Enter your file location.'
 
@@ -23,4 +26,8 @@ puts 'Enter the name you wish the file to be.'
 output = gets.strip.chomp() + '.csv'
 
 #  Creates file with given export filename under the current working directory
-open(output, 'w') { |f| f.puts emails * "," }
+CSV.open(output, 'w') do |f| 
+	emails.each do |x|
+		f << [x]
+	end
+end
